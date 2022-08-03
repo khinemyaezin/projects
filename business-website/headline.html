@@ -27,7 +27,7 @@
             style="background-color: rgba(22, 28, 45, 0.9)">
 
             <div class="container">
-                <a class="navbar-brand" href="http://127.0.0.1:8000">
+                <a class="navbar-brand" href="index.html">
                     <img src="storage/images/9q7bg5VidEvwHLdGDYlOBZX1Xy8ARNgrRFHSP8Oi.png" id="brand-logo" alt=""
                         height="43"
                         onerror="document.getElementById('brand-logo').src = 'storage/essential/err_logo.png' ">
@@ -52,19 +52,19 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="admin/carousels">Carousel</a>
+                                    <a class="dropdown-item" href="#">Carousel</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="admin/types">Types</a>
+                                    <a class="dropdown-item" href="#">Types</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="admin/headlines">Headlines</a>
+                                    <a class="dropdown-item" href="#">Headlines</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="admin/themes">Theme</a>
+                                    <a class="dropdown-item" href="#">Theme</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="admin/theme-group">Theme
+                                    <a class="dropdown-item" href="#">Theme
                                         group</a>
                                 </li>
 
@@ -72,7 +72,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="admin/setting">Vital info</a>
+                                    <a class="dropdown-item" href="#">Vital info</a>
                                 </li>
                             </ul>
                         </li>
@@ -90,8 +90,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
                                     aria-labelledby="user-dropdown">
-                                    <a class="dropdown-item" href="logout"
-                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="#">
                                         Logout
                                     </a>
 
@@ -111,7 +110,7 @@
         </nav>
 
         <main class="admin-main">
-            <form id="myForm" action="admin/headline/1" method="POST" enctype="multipart/form-data">
+            <form id="myForm" action="#" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="OOIv20o6fblIkvhlhXQ5Mdcihe7hOCmbGWw7AVtO"> <input
                     type="hidden" name="_method" value="PUT">
                 <div class="container py-3 py-md-0">
@@ -124,7 +123,7 @@
                         </div>
                         <div class="my-sm-0 my-3 text-sm-end pt-1 w-100">
                             <div class="d-flex justify-content-end align-items-center text-nowrap fs-sm gap-3">
-                                <a href="admin/headlines" class="btn btn-light border ">
+                                <a href="#" class="btn btn-light border ">
                                     <i class="bi bi-chevron-double-left"></i>
                                     Back To List
                                 </a>
@@ -544,7 +543,7 @@
                             ]);
                             $('input[name=submit]').addClass('disabled');
                             $('.json-message .btn-close').click(() => {
-                                alert('hello')
+                                //alert('hello')
                             })
                         } else {
                             Utility.alert(message + ' your data will be replaced.',
@@ -760,14 +759,15 @@
 
             function getThemes() {
                 return new Promise((res, rej) => {
-                    Net.get(`/api/theme/parent/${$('#group_theme option:selected').val()}/children`).then(
-                        e => {
-                            if (e.success) {
-                                res(e.list);
-                            } else {
-                                rej();
-                            }
-                        })
+                    // Net.get(`/api/theme/parent/${$('#group_theme option:selected').val()}/children`).then(
+                    //     e => {
+                    //         if (e.success) {
+                    //             res(e.list);
+                    //         } else {
+                    //             rej();
+                    //         }
+                    //     })
+                    rej();
                 });
             }
 
